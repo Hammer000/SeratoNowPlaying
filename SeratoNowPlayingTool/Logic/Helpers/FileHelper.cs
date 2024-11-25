@@ -137,7 +137,6 @@ namespace NickScotney.SeratoNowPlaying.Logic.Helpers
                 //  Get the Track node we need
                 var trackNodes = nodes[0].ChildNodes
                     .Where(node => node.Name == "div")
-                    .Reverse()
                     .ToList()[trackIndex];
 
                 //  Get the track title node
