@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.IO;
+using System.Web;
 //  Agilty
 using HtmlAgilityPack;
 //  Newtonsoft
@@ -167,7 +168,7 @@ namespace NickScotney.SeratoNowPlaying.Logic.Helpers
                 if (!String.IsNullOrEmpty(trackLabel.LabelPrefix))
                     output += $"{trackLabel.LabelPrefix} ";
 
-                output += $"     {labelValue}     ";
+                output += $"     {HttpUtility.HtmlDecode(labelValue)}     ";
 
                 if (!String.IsNullOrEmpty(trackLabel.LabelSuffix))
                     output += $" {trackLabel.LabelSuffix}";
